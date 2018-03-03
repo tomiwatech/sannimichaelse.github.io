@@ -64,7 +64,7 @@
 	/*--/ Star Typed /--*/
 	if ($('.text-slider').length == 1) {
 		var typed = new Typed('.text-slider', {
-			strings: ["CEO BlasterUp ;)", "Web Developer.", "Web Designer.", "Frontend Developer.", "Graphic Designer."],
+			strings: ["CEO tomiwatechnology ;)", "JavaScript Artisan.", "Python Advocate.", "Ionic Jackal.", "Ruby Enthusiast.", " Go Lover"],
 			typeSpeed: 80,
 			loop: true,
 			backDelay: 1100,

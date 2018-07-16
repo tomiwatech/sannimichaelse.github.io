@@ -96,4 +96,34 @@
 		, }
 	});
 
+	document.getElementById('send').addEventListener('click', function(){
+		const name = document.getElementById('name').value;
+		const email = document.getElementById('email').value;
+		const message = document.getElementById('message').value;
+		const subject = "PORTFOLIO"
+
+		if(!name || !email || !message){
+			swal("Error!", "Please fill all fields!", "error");
+			return;
+		}else {
+            const formatedMessage =`${name} \n ${email} \n ${message}`;
+
+            $.ajax({
+                url: "https://formspree.io/tomiwatech@gmail.com",
+                method: "POST",
+                data: {
+                    message: formatedMessage,
+                    subject: subject
+                },
+                dataType: "json"
+            });
+
+            swal("Message successfully sent! Thanks for Reaching Us", "", "success");
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        }
+
+	})
+
 })(jQuery);
